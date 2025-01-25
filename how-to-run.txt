@@ -1,1 +1,2 @@
-To run this game all you have to do is open the folder and open SF.html
+To run this game all you have to do is open the folder and open index.html
+Also make sure the folder is Extracted!

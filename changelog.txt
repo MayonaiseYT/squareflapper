@@ -1,0 +1,13 @@
+V1.3.0
+--------------------------------------------------------------
+New Maps, Updated RED UI, Logo Mounted to Page, Settings Menu,
+Animated Maps, Changelog Now Public, Eblava Enhancements
+
+
+V1.2.0
+--------------------------------------------------------------
+New Maps, New UI, New Sections, Broken Map Links, Animated Maps
+
+V1.0.0
+--------------------------------------------------------------
+New Maps
