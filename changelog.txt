@@ -1,3 +1,8 @@
+V1.4.1
+--------------------------------------------------------------
+Asset Fixes, Downloadable On Website, First Offline Version,
+New Maps
+
 V1.3.0
 --------------------------------------------------------------
 New Maps, Updated RED UI, Logo Mounted to Page, Settings Menu,
