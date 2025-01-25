@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>FishTank</title>
+    
+<title>RIGHTEOUS JW</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
-    border:3px solid black;
-    background-image: url('../assets/fishtank.gif');
+    border:5px solid rgb(0, 117, 49);
+    background-image: url('../assets/righteousjw.gif');
 	background-repeat: no-repeat;
-	background-size: 1000px 400px;
-    background-color: blue;
+	background-size: 100% 100%;
+    background-color: black;
     color: white;
 }
 
 button {
-background-color:blue;
-color: black;
+background-color:rgb(0, 155, 103);
+color: rgb(0, 0, 0);
 border:2px solid black;
-font-family: arial;
-transition-duration: 0.2s;
-width: 120px;
+transition-duration: 0.0s;
+width: 150px;
 height: 40px;
 font-size: 17px;
 }
 
 button:hover {
-background-color:purple;
+background-color:black;
 color: white;
-transition-duration: 0.2s;
 border:2px solid #333;
-width: 120px;
+width: 150px;
 height: 40px;
-font-family: arial;
+transition-duration: 0.0s;
 font-size: 17px;
 }
 </style>
 </head>
-<body style="background-color: blue;" onload="startGame()">
+<body style="background-color: #111;" onload="startGame()">
 <script>
 
 var myGamePiece;
@@ -44,21 +43,21 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(24, 15, "gold", 10, 120);
-    myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "arial", "white", 300, 40, "text");
+    myGamePiece = new component(30, 30, "#503335", 100, 120);
+    myGamePiece.gravity = 0.10;
+    myScore = new component("30px", "arial", "green", 60, 60, "text");
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 600;
-        this.canvas.height = 400;
+        this.canvas.width = 1200;
+        this.canvas.height = 700;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 13);
+        this.interval = setInterval(updateGameArea, 10);
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -126,22 +125,22 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+    if (myGameArea.frameNo == 1 || everyinterval(200)) {
         x = myGameArea.canvas.width;
-        minHeight = 20;
+        minHeight = 50;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
-        maxGap = 120;
+        minGap = 150;
+        maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "black", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "black", x, height + gap));
+        myObstacles.push(new component(30, height, "black", x, 0));
+        myObstacles.push(new component(30, x - height - gap, "green", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-    myScore.text="SCORE: " + myGameArea.frameNo;
+    myScore.text="999: " + myGameArea.frameNo;
     myScore.update();
     myGamePiece.newPos();
     myGamePiece.update();
@@ -155,11 +154,15 @@ function everyinterval(n) {
 function accelerate(n) {
     myGamePiece.gravity = n;
 }
+
+
 </script>
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">Accelerate</button>
-<a href="#"><button>Restart</button></a></button>
-<a href="../eblava.html"><button>Menu</button></a></button>
+
+
+<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">JUMP</button>
+<a href="#"><button>R</button></a></button>
+<a href="../eblava.html"><button>MENU</button></a></button>
 
 </body>
 </html>
